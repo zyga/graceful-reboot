@@ -1,0 +1,16 @@
+name: graceful-reboot
+version: 1
+summary: Reboots the system gracefully
+description: |
+    This snap contains a graceful-reboot application that requests the system
+    to reboot by talking to the init daemon. The application uses a custom
+    "hello" interface that is developed as a part of a tutorial.
+confinement: strict
+apps:
+    graceful-reboot:
+        command: graceful-reboot
+        plugs: [hello]
+parts:
+    main:
+        plugin: make
+        source: .
