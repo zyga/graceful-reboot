@@ -9,7 +9,7 @@ confinement: strict
 apps:
     graceful-reboot:
         command: graceful-reboot
-        plugs: [hello]
+        plugs: [reboot]
 parts:
     main:
         plugin: make
